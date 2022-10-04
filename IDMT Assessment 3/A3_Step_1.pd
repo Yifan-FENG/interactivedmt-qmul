@@ -1,0 +1,57 @@
+#N canvas 725 27 657 630 12;
+#X obj 40 53 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X obj 100 51 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 0 256;
+#X obj 88 108 + 1;
+#X obj 40 163 hradio 15 1 0 3 empty empty empty 0 -8 0 10 -232576 -4160
+-1 0;
+#X obj 107 419 cyclone/out~;
+#X obj 40 107 i;
+#X obj 40 76 metro 120;
+#X text 162 51 set own tempo;
+#X text 162 77 remember: [metro] bangs forever!;
+#X text 160 162 [Hradio] helps visualise the 4 steps;
+#X text 48 646 TO DO:;
+#X obj 107 341 osc~;
+#X msg 25 253 174.62;
+#X msg 90 252 196;
+#X obj 300 334 vline~;
+#X obj 107 375 *~;
+#X obj 107 311 * 1, f 6;
+#X floatatom 172 338 5 0 0 0 - - -;
+#X msg 301 251 1 125 \, 0.7 5 200 \, 0 100 100;
+#X text 213 338 result;
+#X obj 40 190 select 0 1 2;
+#X text 159 183 [select] with 3 argument allows to use each "step"
+individually to create an arpeggio, f 44;
+#X obj 40 136 mod 3;
+#X text 162 108 the counter with modulo 3 bounds the [metro] to 0-1-2
+only, f 34;
+#X text 10 11 Arpeggio;
+#X msg 143 254 261.63;
+#X connect 0 0 6 0;
+#X connect 1 0 6 1;
+#X connect 2 0 5 1;
+#X connect 3 0 20 0;
+#X connect 5 0 2 0;
+#X connect 5 0 22 0;
+#X connect 6 0 5 0;
+#X connect 11 0 15 0;
+#X connect 12 0 16 0;
+#X connect 13 0 16 0;
+#X connect 14 0 15 1;
+#X connect 15 0 4 0;
+#X connect 15 0 4 1;
+#X connect 16 0 11 0;
+#X connect 16 0 17 0;
+#X connect 18 0 14 0;
+#X connect 20 0 18 0;
+#X connect 20 0 12 0;
+#X connect 20 1 18 0;
+#X connect 20 1 13 0;
+#X connect 20 2 18 0;
+#X connect 20 2 25 0;
+#X connect 20 3 18 0;
+#X connect 22 0 3 0;
+#X connect 25 0 16 0;
